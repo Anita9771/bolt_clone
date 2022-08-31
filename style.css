@@ -449,7 +449,7 @@ body{
         padding: 1rem 0 .5rem 1rem;
     }
 
-    nav .burger_top .hamburger .bx-x, nav .nav_head, nav .global_one_small, header .below_header_text_big_blue, header .below_header_text_big_small, .bottom_down .bottom_down_buttons{
+    nav .burger_top .hamburger .bx-x, nav .nav_head, nav .global_one_small, header .below_header_text_big_blue, header .below_header_text_small_blue, .bottom_down .bottom_down_buttons{
         display: none;
     }
 
@@ -672,7 +672,7 @@ body{
     
 }
 
-@media screen and (min-width: 768px) and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     body{
         overflow-x: hidden;
         max-width: 100vw;
@@ -687,7 +687,7 @@ body{
             padding: 1rem 0 .5rem 1rem;
         }
     
-        nav .burger_top .hamburger .bx-x, nav .nav_head, nav .global_one_small, header .below_header_text_big_blue, header .below_header_text_big_small, .bottom_down .bottom_down_buttons{
+        nav .burger_top .hamburger .bx-x, nav .nav_head, nav .global_one_small, header .below_header_text_small_blue{
             display: none;
         }
     
@@ -724,7 +724,7 @@ body{
         }
     
         header .header_left .header_download_btns img,  header .header_left p{
-            text-align: center;
+            text-align: left;
         }
     
         header .header_left h1{
@@ -741,15 +741,25 @@ body{
     
         
         .below_header{
-            background-color: #6675ff;
-            text-align: center;
+            background-color: #4f5cd1;
             flex-direction: column;
+            position: relative;
         }
     
+        header .below_header_text_big_blue{
+            background-color: #6675ff;
+            height: 740px; 
+            width: 740px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: -270px;
+            z-index: 2;
+        }
+
         .below_header_text_content{
-            flex-direction: column;
-            
-            padding: 0;
+            flex-direction: row;
+            padding: 0 1rem;
         }
     
         .below_header_text_content h3{
@@ -773,21 +783,21 @@ body{
         } 
     
         .cards{
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             padding: 0 2rem;
         }
         
         .card{
             display: flex;
             width: 100%;
-            flex-direction: row;
+            flex-direction: column;
             margin: 0;
         }
         
         .card img{
-            width: 80px;
-            height: 80px;
-            padding-top: 2rem;
+            width: 200px;
+            height: 200px;
+            padding-top: 5rem;
         }
         
         .card h3{
@@ -810,6 +820,7 @@ body{
         
         .phone_map_text{
             padding: 10rem 0 .2rem .2rem ;
+            text-align: center;
         }
         
         .phone_map h2{
@@ -826,11 +837,11 @@ body{
             width: 30rem;
             height: 30rem;
             top: -18rem;
-            right: .5rem; 
+            right: 10rem; 
         }
     
         .adverts{
-            flex-direction: column;
+            flex-direction: row;
             padding: 0 2rem;
         }
         
@@ -838,14 +849,14 @@ body{
             display: flex;
             width: 100%;
             flex-direction: column;
-            margin: 0;
+            margin: 2rem 0;
+            align-items: flex-start;
             position: relative;
-            padding: 1rem 0;
+            padding: 1rem;
         }
         
         .advert img{
-           
-            position: absolute;
+            margin-left: 2rem;
         }
         
         .advert h4{
@@ -864,17 +875,24 @@ body{
     
         .bottom .bottom_top {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
     
         .bottom .bottom_top .list{
-            padding-top: 1.5rem;
+            padding: 1.5rem 5rem;
+            align-items: flex-start;
         }
         
         .bottom_down{
             display: flex;
             flex-direction: column;
             align-items: center;
+            flex-direction: column-reverse;
+        }
+
+        .bottom_down_icon{
+           padding-top: 2rem;
         }
     
         hr{
